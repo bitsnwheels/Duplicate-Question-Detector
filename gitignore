@@ -1,1 +1,40 @@
-myenv
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+myenv/
+.env/
+.venv/
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VSCode config (optional)
+.vscode/
+
+# Pytest / test logs
+*.log
+.cache/
+coverage/
+
+# Build/dist
+build/
+dist/
+*.egg-info/
+
+# Python environment files
+*.egg
+*.whl
+
+# Render local files (if any)
+render.yaml
