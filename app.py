@@ -36,5 +36,13 @@ def index():
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 5000))  # Railway sets PORT in env
+
+    port = os.environ.get("PORT")
+    if port is None:
+        print("PORT environment variable not found, defaulting to 5000")
+        port = 5000
+    else:
+        port = int(port)
+        print(f"Using PORT from environment: {port}")
+
     app.run(host="0.0.0.0", port=port)
