@@ -27,7 +27,7 @@ def index():
             pred = rf.predict(query_features)[0]
             proba = rf.predict_proba(query_features)[0][1]  # Confidence for class 1
 
-            prediction = f"Duplicate ({proba * 100:.1f}%)" if pred == 1 else f"Not Duplicate ({(1 - proba) * 100:.1f}%)"
+            prediction = f"Duplicate " if pred == 1 else f"Not Duplicate "
         except Exception as e:
             prediction = f"Error: {e}"
         
